@@ -1,0 +1,18 @@
+.init{
+    font-weight: bold;
+    background: #f5f5f5;
+}
+
+
+/*输入错误时的样式*/
+.wrong{
+    font-weight: bold;
+    background: #f5f5f5;
+    border:1px #f00 solid;
+}
+/*输入正确时的样式*/
+.right{
+    font-weight: bold;
+    background: #f5f5f5;
+    border: 1px #0f0 solid;
+}
