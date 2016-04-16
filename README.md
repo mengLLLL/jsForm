@@ -6,6 +6,6 @@
 document.all()来获取具有相同id的一组对象，返回值是一个数组，比如单选按钮
 
 支持onchange()的控件:
-  <input type="text"> 
+  “<input type="text"> 
   <select>
-  <textarea>
+  <textarea>”
