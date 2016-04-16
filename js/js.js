@@ -63,3 +63,49 @@ function validateConf(){
     }
     return false;
 }
+//单选按钮练习
+function showSex(){
+    var sex = document.all("sex");
+    for(var i = 0;i<sex.length;i++){
+        if (sex[i].checked){
+            alert("性别是:"+sex[i].value);
+        }
+    }
+}
+//复选框练习
+function showInst(){
+    var inst = document.all("inst");//获得所有的兴趣
+    var str = "你的兴趣是:";
+    for(var i = 0;i<inst.length;i++){
+        if(inst[i].checked){
+            str+=inst[i].value+",";
+        }
+    }
+    alert(str);
+}
+function selectAll(){
+    var inst = document.all('inst');
+    for(var i = 0;i<inst.length;i++){
+        inst[i].checked = document.getElementById('all').checked;
+    }
+}
+
+
+//下拉列表框练习
+function showCity(city){
+    alert("你的家乡是"+city);
+}
+//文本域练习
+function valiNote(){
+    var note = document.getElementById('note');
+    var msg = document.getElementById('noteMsg');
+    //msg.innerHTML = "输入数据长度:"+note.value.length;  显示当前输入字符数目
+     var len = note.value.length;
+    if(len<=20){
+        msg.innerHTML = "还可以输入"+(20-len)+"个字.";
+        document.getElementById('sub').disabled = false;
+    }else{
+        msg.innerHTML = "超出字符限制!";
+        document.getElementById('sub').disabled = true;
+    }
+}

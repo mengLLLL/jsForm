@@ -17,11 +17,44 @@
 </form>
 
 
+
+<!--两次输入密码是否一致验证-->
+
 输入密码:<input type="password" id="psd" name="psd" onblur="validatePsd()"><span id="psdMsg"></span><br>
 确认密码:<input type="password" id="conf" name="conf" onblur="validateConf()"><span id="confMsg"></span><br>
 
+<!--单选按钮练习-->
+请输入性别:<input id="sex" name="sex" type="radio" value="男" checked>男&nbsp;
+<input id="sex" name="sex" type="radio" value="女">女<br>
+<button onclick="showSex()">显示性别</button><br>
+
+<!--复选框练习-->
+请选择你的兴趣:<br>
+<input type="checkbox" value="看电影" name="inst" id="inst">看电影<br>
+<input type="checkbox" value="看书" name="inst" id="inst">看书<br>
+<input type="checkbox" value="跑步" name="inst" id="inst">跑步<br>
+<input type="checkbox" value="写字" name="inst" id="inst">写字<br>
+<br>
+<input type="checkbox" value="全选" name="all" id="all" onclick="selectAll()">全选    <button onclick="showInst()">显示兴趣</button><br><br><br>
 
 
-<script type="text/javascript" src="js/js.js"></script>
+<!--下拉列表框练习-->
+你的家乡是:<select name="city" id="city" onchange="showCity(this.value)">
+    <option value="运城">运城</option>
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+</select>
+
+<!--文本域练习-->
+<form action="showMes.html" method="post">
+    描述:<textarea id="note" name="note" cols="30" rows="10" onkeypress="valiNote()" onkeydown="valiNote()"></textarea><br>
+    <!--提示信息-->
+    <span id="noteMsg"></span><br>
+    <button type="submit" name="sub" id="sub">提交</button>
+</form>
+
+
+<script type="text/javascript" src="js/js.js">
+</script>
 </body>
 </html>
